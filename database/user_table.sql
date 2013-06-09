@@ -1,5 +1,5 @@
 # design of blog database table 记录数据库设计 
-# June 1. 2013
+# June 9. 2013
 
 -- table of user
 CREATE TABLE IF NOT EXISTS prefix_user
