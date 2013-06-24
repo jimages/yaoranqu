@@ -1,0 +1,92 @@
+/*	author:jimages
+ *	date:Jun.24 2013
+ *	global sheetstyle file 
+ */
+@charset "utf8";
+:root {
+	background-color:#e6e4e4
+	}
+#mainBody {
+	margin:20px auto 0px auto;
+	background-color:white;
+}
+#getEmail {
+	padding:20px 0px;
+	width:870px;
+	margin:auto;
+	}
+#getEmail p {
+	font: 400 18px \6977\4F53
+	}
+#gitEmail ul {
+	-webkit-padding-start:0px;
+	-moz-padding-start:0px;
+	}
+#getEmail span {
+	font: 400 20px \65B0\5B8B\4F53
+	}
+#getEmail form {
+		display:inline-block
+		}
+#emailInput{
+	border:0px none transparent;
+	width:500px;
+	height:42px;
+	outline:invert none medium;
+	background-image:url(http://resource.yaoranqu.com/images/email_input.png);
+	background-repeat:no-repeat;
+	padding-left:10px;
+	padding-right:5px;
+	font:400 23px Arial; 
+	}
+#emailSubmit {
+	width:175px;
+	height:47px;
+	background-image:url(http://resource.yaoranqu.com/images/submit.png);
+	padding:6px;
+	background-repeat:no-repeat;
+	border:0px none ;
+	font:400 21px \u65B0\5B8B\4F53;
+	}
+#emailSubmit:active,#emailSubmit-active {
+	padding:6px;
+	background-repeat:no-repeat;
+	background-image:url(http://resource.yaoranqu.com/images/submit_down.png);
+	border:0px none ;
+	width:175px;
+	height:47px
+	}
+article {
+	margin:auto;
+	padding:30px 0 30px 0;
+	}
+article h3 {
+	margin-left:50px;
+	font:500 25px \5B8B\4F53;
+	margin-bottom:20px;
+	}
+article p {
+	text-indent:2em;
+	font:400 15px \65B0\5B8B\4F53;
+	width:900px;
+	}
+footer#pageEnd {
+	height:126px;
+	background-image:url(http://resource.yaoranqu.com/images/footer.png);
+	background-repeat:repeat-x;
+}
+footer#pageEnd ul {
+	padding:70px 30px 0px 30px;
+	}
+footer#pageEnd a {
+	font: 300 13px \5B8B\4F53;
+	color:#6b6b6b;
+	line-height:5px;
+	text-decoration:none;
+	}
+#icp {
+	padding-left:333px;
+	}
+
+
+	
