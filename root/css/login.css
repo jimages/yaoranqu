@@ -1,0 +1,66 @@
+/*	author:jimages
+ *	date:Jun.26 2013
+ *	this is for login.
+ */
+@charset "utf8";
+:root {
+	background-color:#ce7d7c;
+	}
+#login {
+	background-image:url(http://yaoranqu-resource.oss.aliyuncs.com/images/login_back.png);
+	width:531px;
+	height:298px;
+	margin-top:150px;
+	text-align:center;
+	position:relative;
+	}
+#login h1 {
+	padding:20px 0px 0px 40px;
+	text-align:left;
+	font:600 25px \5FAE\8F6F\96C5\9ED1;
+	}
+#login li {
+	display:block;
+	margin:20px auto 30px auto;
+	}
+input.loginText {
+	background-color:#ffffff;
+	width:310px;
+	height:35px;
+	font:400 20px \5FAE\8F6F\96C5\9ED1;
+	border:1px solid #dad7d7;
+	text-indent:10px;
+}
+input#loginSubmit {
+	background-image:url(http://yaoranqu-resource.oss.aliyuncs.com/images/login_button.png);
+	width:151px;
+	height:31px;
+	border:0px none ;
+	font:400 20px \5FAE\8F6F\96C5\9ED1;
+	color:#ffffff;
+	letter-spacing:10px;
+	cursor:pointer;
+	}
+#error {
+	font:300 10px \5FAE\8F6F\96C5\9ED1;
+	color:#ff0000;
+	}
+footer {
+	height:60px;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	background-color:#f4f4f4;
+	}
+footer ul {
+	padding-top:20px
+	}
+#login label {
+	display:inline-block;
+	position:absolute;
+	left:120px;
+	padding-top:5px;
+	font:500 20px \5FAE\8F6F\96C5\9ED1;
+	color:#ebe9e9;
+	}
