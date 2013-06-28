@@ -3,13 +3,14 @@
  *	this is for login.
  */
 @charset "utf8";
-:root {
+body {
 	background-color:#ce7d7c;
 	}
 #login {
-	background-image:url(http://yaoranqu-resource.oss.aliyuncs.com/images/login_back.png);
-	width:531px;
-	height:298px;
+	background-image:url(http://resource.yaoranqu.com/images/login_back.png);
+	padding:15px 10px 15px 15px;
+	width:500px;
+	height:264px;
 	margin-top:150px;
 	text-align:center;
 	position:relative;
@@ -18,6 +19,9 @@
 	padding:20px 0px 0px 40px;
 	text-align:left;
 	font:600 25px \5FAE\8F6F\96C5\9ED1;
+	}
+#login ul {
+	display:inline;
 	}
 #login li {
 	display:block;
@@ -32,7 +36,7 @@ input.loginText {
 	text-indent:10px;
 }
 input#loginSubmit {
-	background-image:url(http://yaoranqu-resource.oss.aliyuncs.com/images/login_button.png);
+	background-image:url(http://resource.yaoranqu.com/images/login_button.png);
 	width:151px;
 	height:31px;
 	border:0px none ;
@@ -45,7 +49,7 @@ input#loginSubmit {
 	font:300 10px \5FAE\8F6F\96C5\9ED1;
 	color:#ff0000;
 	}
-footer {
+#pageEnd{
 	height:60px;
 	position:absolute;
 	bottom:0px;
@@ -53,7 +57,7 @@ footer {
 	width:100%;
 	background-color:#f4f4f4;
 	}
-footer ul {
+#pageEnd ul {
 	padding-top:20px
 	}
 #login label {

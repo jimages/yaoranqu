@@ -29,7 +29,7 @@ $("#password").blur(function() {
 		}
 	});
 //check the both username and password are empty.
-$("form").submit( function() {
+$("form").submit( function(event) {
 	var username = $("#username").val();
 	var password = $("#password").val();
 	if (username == '' || password == '' )
