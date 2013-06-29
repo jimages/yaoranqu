@@ -1,0 +1,72 @@
+/* author:jimages
+ * date:Jun 28.2013
+ * the stylesheet is for blog_article
+ */
+@charset "utf8";
+body {
+	background-color:#e6e4e4
+	}
+#articleIndex {
+	background-color:#ffffff;
+	width:960px;
+	margin-top:10px;
+	}
+#articleIndex span {
+	font: 400 15px \5FAE\8F6F\96C5\9ED1;
+	margin:15px auto 15px 50px;
+	color:#000000;
+	display:inline-block;
+	}
+h1 {
+	font: 400 15px \5FAE\8F6F\96C5\9ED1;
+	display:inline;
+	}
+#articleIndex span a {
+	color:#429fff
+	}
+#articleIndex hr {
+	border:3px solid #e8e5e5
+	}
+#articleIndex ul {
+	margin:auto 100px;
+	display:block;
+	}
+#articleIndex ul#index li {
+	font:400 16px \5FAE\8F6F\96C5\9ED1;
+	color:#000000;
+	display:block!important;
+	padding:8px 0px;
+	border-bottom:1px solid #afa3a3;
+	}
+#articleIndex ul li a {
+	color:#000000
+	}
+#articleIndex ul li span {
+	float:right;
+	margin:auto;
+	}
+#pageNext {
+	text-align:center;
+	}
+#pageNext a {
+	margin:5px;
+	padding:7px 10px ;
+	display:inline-block;
+	font:400 12px \65B0\5B8B\4F53;
+	color:#000000;
+	border:2px solid #429fff;
+	}
+#pageNext a:first-chrld,#pageNext li:last-chrld {
+	width:100px
+	}
+#nowPage {
+		border:2px none #429fff!important
+		}
+	#pageEnd {
+	background-image:url(http://resource.yaoranqu.com/images/footer.png);
+	height:126px;
+	background-repeat:repeat-x;
+	}
+#pageEnd ul {
+	padding: 70px 0px 20px 0px!important;
+	}

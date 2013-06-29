@@ -31,9 +31,10 @@ body {
 	border:2px solid #bdb8b8;
 	width:500px;
 	height:42px;
-	font:400 35px Arial; 
-	padding:1px 8px;
+	font:400 30px Arial; 
+	padding:0px 8px;
 	display:inline-block;
+	text-align:middle;
 	}
 #emailSubmit {
 	width:175px;

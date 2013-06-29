@@ -29,6 +29,9 @@ body {
 	width:960px ;
 	margin:auto ;
 	}
+	a{
+	text-decoration:none
+	}
 div {
 	display:block
 	}
@@ -45,8 +48,8 @@ ul {
 li {
 	display:inline-block
 	}
-h1,h2,h3,h4,h5,h6,h7,p {
-	display:block;
+h1,h2,h3,h4,h5,h6,p {
+	display:block
 	}
 /*header sheetstyle */
 #pageStart {
@@ -66,7 +69,6 @@ h1,h2,h3,h4,h5,h6,h7,p {
 #pageStart a {
 	font:600 20px \5FAE\8F6F\96C5\9ED1;
 	color:white;
-	text-decoration:none;
 	}
 #pageStart ul{
 	padding:10px 0px 0px 50px;
