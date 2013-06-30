@@ -18,8 +18,9 @@ body {
 	display:inline-block;
 	}
 h1 {
-	font: 400 15px \5FAE\8F6F\96C5\9ED1;
-	display:inline;
+	font: 400 25px \5FAE\8F6F\96C5\9ED1;
+	text-align:center;
+	padding-top:30px;
 	}
 #articleIndex span a {
 	color:#429fff
@@ -62,7 +63,7 @@ h1 {
 #nowPage {
 		border:2px none #429fff!important
 		}
-	#pageEnd {
+#pageEnd {
 	background-image:url(http://resource.yaoranqu.com/images/footer.png);
 	height:126px;
 	background-repeat:repeat-x;
