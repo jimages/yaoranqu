@@ -3,15 +3,11 @@
  * the stylesheet is for blog_article
  */
 @charset "utf8";
-body {
-	background-color:#e6e4e4
-	}
-#articleIndex {
+#mainBody {
 	background-color:#ffffff;
 	width:960px;
-	margin-top:10px;
 	}
-#articleIndex span {
+#mainBody span {
 	font: 400 15px \5FAE\8F6F\96C5\9ED1;
 	margin:15px auto 15px 50px;
 	color:#000000;
@@ -22,27 +18,27 @@ h1 {
 	text-align:center;
 	padding-top:30px;
 	}
-#articleIndex span a {
+#mainBody span a {
 	color:#429fff
 	}
-#articleIndex hr {
+#mainBody hr {
 	border:3px solid #e8e5e5
 	}
-#articleIndex ul {
+#mainBody ul {
 	margin:auto 100px;
 	display:block;
 	}
-#articleIndex ul#index li {
+#mainBody ul#index li {
 	font:400 16px \5FAE\8F6F\96C5\9ED1;
 	color:#000000;
 	display:block!important;
 	padding:8px 0px;
 	border-bottom:1px solid #afa3a3;
 	}
-#articleIndex ul li a {
+#mainBody ul li a {
 	color:#000000
 	}
-#articleIndex ul li span {
+#mainBody ul li span {
 	float:right;
 	margin:auto;
 	}

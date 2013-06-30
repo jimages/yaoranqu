@@ -3,13 +3,6 @@
  *	global sheetstyle file 
  */
 @charset "utf8";
-body {
-	background-color:#e6e4e4
-	}
-#mainBody {
-	margin:20px auto 0px auto;
-	background-color:white;
-}
 #getEmail {
 	padding:20px 0px;
 	width:870px;
