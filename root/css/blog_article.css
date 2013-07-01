@@ -59,11 +59,3 @@ h1 {
 #nowPage {
 		border:2px none #429fff!important
 		}
-#pageEnd {
-	background-image:url(http://resource.yaoranqu.com/images/footer.png);
-	height:126px;
-	background-repeat:repeat-x;
-	}
-#pageEnd ul {
-	padding: 70px 0px 20px 0px!important;
-	}

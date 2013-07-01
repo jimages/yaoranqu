@@ -39,6 +39,14 @@
 	line-height:5px;
 	text-decoration:none;
 	}
+#pageEnd {
+	background-image:url(http://resource.yaoranqu.com/images/footer.png);
+	height:126px;
+	background-repeat:repeat-x;
+	}
+#pageEnd ul {
+	padding: 70px 0px 20px 0px!important;
+	}
 #icp {
 	padding-left:333px;
 	}
