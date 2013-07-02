@@ -1,0 +1,24 @@
+/* author:jimages
+ * date: Jun 2.2013
+ * the stylesheet file is for blog articles page
+ */
+@charset "utf8";
+p {
+	margin:30px 100px;
+	text-indent:2em;
+	font:400 18px \65B0\5B8B\4F53;
+	letter-spacing:2px;
+	line-height:25px;
+	}
+#mainBody img {
+	max-width:760px;
+	display:block;
+	padding-bottom:40px;
+	}
+#mainBody span {
+	display:block;
+	text-align:right;
+	font:300 15px \6977\4F53 ;
+	}
+	
+	

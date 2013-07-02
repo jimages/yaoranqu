@@ -59,3 +59,8 @@ body {
 	margin:20px auto 0px auto;
 	background-color:white;
 }
+h1 {
+	font: 400 25px \5FAE\8F6F\96C5\9ED1;
+	text-align:center;
+	padding-top:30px;
+	}
