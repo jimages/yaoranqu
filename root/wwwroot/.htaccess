@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+# Author:jimages
+# Date:July 11.2013
+#If visitors go to yaoranqu.com or jimages.gotoip1.com.They will redirect to www.yaoranqu.com
+RewriteEngine On
+Options FollowSymLinks
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^yaoranqu\.com.*$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^jimages\.gotoip1\.com.*$
+RewriteRule ^(.*)$ http://www.yaoranqu.com/$1 [R=301,L]
+#It is for CodeIgniter.remove index.php.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [NS,QSA,L]
+</IfModule>
