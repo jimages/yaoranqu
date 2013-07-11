@@ -41,22 +41,3 @@ CREATE TABLE IF NOT EXISTS prefix_blog_article_remove
 	FOREIGN KEY (kind_id) REFERENCES prefix_article_kind (id)
 )
 ENGINE = InnoDB CHARACTER SET  = UTF8;
--- news RSS address
-CREATE TABLE IF NOT EXISTS prefix_rss_root (
-	id INT NOT NULL AUTO_INCREMENT ,
-	url TEXT NOT NULL ,
-	create_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (id)
-)
-ENGINE = InnoDB CHARACTER SET = UTF8 ;
--- news RSS body
-CREATE TABLE IF NOT EXISTS prefix_rss_item (
-	id INT NOT NULL AUTO_INCREMENT ,
-	title TEXT NOT NULL ,
-	url TEXT NOT NULL ,
-	add_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ,
-	root INT NOT NULL  ,
-	PRIMARY KEY (id),
-	FOREIGN KEY (root) REFERENCES prefix_rss_root (id)
-)
-ENGINE = InnoDB CHARACTER SET = UTF8 ;
