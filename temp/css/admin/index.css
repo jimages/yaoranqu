@@ -1,0 +1,299 @@
+/* date:July.3 2013
+ * author:jimages
+ * the css is admin common stylesheet file.and it is the ugly2 basic.
+ */
+ @charset "utf-8";
+ @media all {
+	 html{
+		background-repeat:no-repeat;
+		background-color:transparent;
+		-webkit-margin-before: 0px;
+		-webkit-margin-after: 0px;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		-webkit-padding-start:0px;
+		-webkit-padding-end:0px;
+		-webkit-padding-before:0px;
+		-webkit-padding-after:0px;
+		-moz-margin-before: 0px;
+		-moz-margin-after: 0px;
+		-moz-margin-start: 0px;
+		-moz-margin-end: 0px;
+		-moz-padding-start:0px;
+		-moz-padding-end:0px;
+		-moz-padding-before:0px;
+		-moz-padding-after:0px;
+		outline:invert none medium;
+		font-family:"Segoe UI Symbol","Segoe UI",\5FAE\8F6F\96C5\9ED1,\5E7C\5706;
+	}
+	body {
+		 margin:0;
+		padding:0;
+	}
+	a{
+		text-decoration:none
+		}
+	div {
+		display:block
+		}
+	h1,h2,h3 {
+		display:inline-block;
+		margin:0px;
+		}
+	img {
+		border-style:none;
+		}
+	/* pageStert */
+	#pageStart {
+		width:100%
+		}
+	#pageStart h1 {
+		width:27%;
+		height:40px;
+		background:url('http://resource.yaoranqu.com/images/admin/head_left.png') repeat;
+		font-size:25px;
+		color:#fff;
+		}
+	#pageStart h2 {
+		float:right;
+		width:72%;
+		height:49px;
+		background:url('http://resource.yaoranqu.com/images/admin/head_right.png') repeat;
+		text-align:center;
+		font-size:20px;
+		vertical-align:sub;
+		}
+	#pageStart #connect {
+		background:url('http://resource.yaoranqu.com/images/admin/head_left_connect_right.png') no-repeat;
+		width:31px;
+		height:49px;
+		position:absolute;
+		top:0px;
+		left:27%;
+		vertical-align:middle;
+		}
+	#pageStart span {
+		position:absolute;
+		right:2%;
+		top:10px;
+		}
+	#pageStart span a {
+		color:#fff;
+		font-weight:600;
+		}
+	/* header end. aside start */
+	#pageAside {
+		display:inline-block;
+		background-color:#eaeaea;
+		height:100%;
+		border-right:3px solid #e5dfdf;
+		width:26%;
+		float:left;
+		min-height:500px;
+		}
+	#pageAside ul {
+		padding:0px;
+		margin:0px;
+		}
+	#pageAside ul  li{
+		list-style-type:none;
+		border-bottom:3px solid #e5dfdf;
+		margin-left:10%;
+		padding:0px;
+		}
+	#pageAside ul li:first-child {
+		vertical-align:middle;
+		padding:5px 0px;
+		}
+	#pageAside ul li:first-child span {
+		display:inline-block;
+		font-weight:600;
+		font-size:30px!important;
+		color:#000;
+		}
+	#pageAside ul li:first-child  a {
+		display:inline-block;
+		}
+	#pageAside ul  li a{
+		padding-bottom:5px;
+		display:block;
+		color:#000;
+		font-size:20px;
+		font-weight:500;
+		text-align:center;
+		position:relative;
+		z-index:2;
+		}
+	#selectedBackground {
+		border-radius:20px 0px 0px 20px;
+		left:11%;
+		width:15%;
+		background:#ce7d7c;
+		height:1.8em;
+		position:absolute;
+		z-index:1
+		}
+	#copyright {
+		font-size:10px;
+		color:#aeafaf;
+		padding:30px;
+	}
+	/* Page aside end.index page sart.*/
+	/* common stylesheet */
+	.page {
+		float:left;
+		margin:25px 1.5% auto 1%;
+		width:71%;
+		position:absolute;
+		z-index:-1;
+		}
+	.page h3 {
+		width:100%;
+		border:1px none #000;
+		border-radius:5px;
+		font-weight:500;
+		text-align:center;
+		background-color:#d5d3d3;
+		}
+	.page section {
+		border-radius:5px;
+		background-color:#eeebeb;
+		margin-top:20px;
+		font-size:18px;
+		font-weight:600;
+		}
+	h4 {
+		color:#fff;
+		text-indent:5px;
+		background-color:#d5d3d3;
+		border-radius:5px 5px 0px 0px;
+		margin:auto;
+		}
+	.page div,.page table {
+		width:100%;
+		text-align:center;
+		}
+	/* Index page start*/
+	/* const stylesheet */
+	#index {
+		right:0px;
+		}
+	#date {
+		font-size:20px;
+		font-weight:500;
+		}
+	.const {
+		font-size:30px;
+		font-weight:600;
+		}
+	.constTitle {
+		font-size:15px;
+		font-weight:400;
+		color:#cccccc;
+		}
+	#index table {
+		padding:10px 0px;
+		}
+	/*create a new article */
+	#index input[name=title] {
+		background-color:#fff;
+		border:1px solid #c8c3c3;
+		height:38px;
+		width:70%;
+		padding:0px;
+		margin:0px;
+		font-size:30px;
+		text-indent:2%;
+		float:left;
+		}
+	#selectedType {
+		width:25%;
+		height:38px;
+		display:inline-block;
+		border:1px solid #c8c3c3;
+		background:#fff url('http://resource.yaoranqu.com/images/admin/selectType.png') right no-repeat;
+		cursor:pointer;
+		float:right;
+		font-size:30px;
+		font-weight:400;
+		color:#c3c3c3;
+		}
+	#index form {
+		display:inline-block;
+		width:100%;
+		position:relative;
+		}
+	#textTitleNotice {
+		font-size:30px;
+		font-weight:400;
+		color:#c3c3c3;
+		position:absolute;
+		left:2%;
+		cursor:text;
+		}
+	/* type option */
+	#typeOption  {
+		width:25%;
+		position:absolute;
+		right:0px;
+		top:0px;
+		list-style:none;
+		display:none;
+		z-index:2;
+		margin-top:0px;
+		}
+	#typeOption li {
+		width:100%;
+		height:38px;
+		border:1px solid #c8c3c3;
+		cursor:pointer;
+		font-size:30px;
+		font-weight:400;
+		color:#c3c3c3;
+		background-color:#fff
+	}
+	#textSubmit {
+		display:inline-block;
+		background-color:#3399cc;
+		width:10%;
+		height:150px;
+		border-style:none;
+		border-radius:5px;
+		float:left;
+		cursor:pointer;
+		font-size:30px;
+		font-weight:500;
+		}
+	/* index page end.article page start. */
+	#article {
+		right:100%
+		}
+	#article thead tr td{
+		border:2px solid #3399cc;
+		}
+	#article tbody tr td, #article tbody tr td a{
+		font-weight:400;
+		color:#000;
+		}
+	.pageNumber {
+		width:60px;
+		height:30px;
+		font-size:13px;
+		border:1px solid #3588b7;
+		background-color:#3588b7;
+		cursor:pointer;
+		margin:20px -3px;
+		color:#fff
+	}
+	#article #head {
+		border-radius:5px 0px 0px 5px;
+	}
+	#article #foot {
+		border-radius:0px 5px 5px 0px;
+	}
+	.pageNumber:active {
+	background-color:#4cafe7;
+	border-left:2px solid #999999;
+	border-right:2px solid #999999;
+	}	
+}
