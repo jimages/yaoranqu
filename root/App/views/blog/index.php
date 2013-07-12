@@ -9,6 +9,8 @@
 		<link rel="stylesheet" type="text/css" href="http://resource.yaoranqu.com/css/common.css" /> 
 		<link rel="stylesheet" type="text/css" href="http://resource.yaoranqu.com/css/blog_index.css" /> 
 		<link rel="stylesheet" type="text/css" href="http://resource.yaoranqu.com/css/blog_common.css" />
+		<link rel="shortcut icon" href="http://resource.yaoranqu.com/images/favicon.ico"/>
+		<script type='text/javascript' src='http://resource.yaoranqu.com/js/jquery-1.10.1.min.js' ></script>
 	</head>
 	<body>
 		<header>
@@ -37,7 +39,7 @@
 			<div id="getEmail">
 				<p>&nbsp;&nbsp;&nbsp;&nbsp;您好，本网站正在建设中，您现在看到的是本站的开发博客。您可以将您的电子邮件留下以便于当网站建设完成并上线后，我们将以电子邮件的形式提醒您。我们将妥善保存您的信息。</p>
 				<span>您的电子邮件：</span>
-				<form accept-charset="utf8" target="_blank" name="getEmail">
+				<form accept-charset="utf8" target="_blank" name="getEmail" action='/blog/getEmail' method='get'>
 					<ul>
 						<li>
 							<input type="email" name="email" id="emailInput" maxlength="37" />
@@ -48,28 +50,21 @@
 					</ul>
 				</form>
 			</div>
+			<?php foreach ($articles as $article) { ?>
 			<img src="http://resource.yaoranqu.com/images/split.png" alt="分割条" />
 			<article>
 				<div class="article">
 					<header>
-						<h3>写在开战的话</h3>
+						<h3><?php
+							/*article title */echo $article->title; ?></h3>
 					</header>
-					<p>开站了，心中很高兴。为了这个网站，用了很多精力，忙碌了数个日日夜夜，从数据库到页面设计，从后台到前端。为了这个网站，我也学了很多的东西。php sql css3 html5 javascaript 学会了使用 photoshop 学会了使用 linux,我可真是个多面手。但是无论再多的辛劳，在看到自己的网站上线后都消失了。这恐怕就像父母看到自己的孩子出生那样吧。这个网站似乎很丑陋，很丑陋。不过没办法了。只有将就用着，以后再来改界面吧。</p>
+					<?php
+						/* article body */echo $article->body; ?>
 					<footer>
 					</footer>
 				</div>
 			</article>
-			<img src="http://resource.yaoranqu.com/images/split.png" alt="分割条" />
-			<article>
-				<div class="article" >
-					<header>
-						<h3>你好，时间</h3>
-					</header>
-					<p>你好，世界。这是一篇测试文章。</p>
-					<footer>
-					</footer>
-				</div>
-			</article>
+			<?php } ?>
 		</div>
 		<footer>
 			<div id="pageEnd">
@@ -96,5 +91,6 @@
 				</ul>
 			</div>
 		</footer>
+		<script type='text/javascript' src='http://resource.yaoranqu.com/js/blog/index.js'></script>
 	</body>
 </html>

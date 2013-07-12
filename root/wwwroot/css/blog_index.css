@@ -54,8 +54,12 @@ h3 {
 	margin-bottom:20px;
 	}
 p	 {
+	line-height:150%;
+	margin:30px auto;
 	text-indent:2em;
-	font:400 15px \65B0\5B8B\4F53;
 	width:900px;
+	}
+#mainBody article {
+	font:400 15px \65B0\5B8B\4F53;
 	}
 	
