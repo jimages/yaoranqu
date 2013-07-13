@@ -71,20 +71,21 @@ class Blog extends CI_Controller {
 		// $page add 1 be equal to page number.There is page number.be not the same as $page.
 		// If the useful pages litter than 9,It only display useful page.
 		 $now_page = $data['now_page'] = $page + 1;
-		if ($now_page < 5) { 
+		if ($now_page <= 5 && $max_page >= 9) { 
 			$page_start = 1;
+			$page_end = 9;
 		} 
-		if ($max_page <= 9) {
+		if ($now_page > 5 && $max_page >= $now_page +4) {
+			$page_start = $now_page -4;
+			$page_end = $now_page +4;
+		}
+		if ($max_page < 9) {
 			$page_start = 1;
 			$page_end = $max_page;
 		}
-		if ( $max_page > 9 && ($max_page - $now_page) <= 4) {
-			$page_end = $max_page;
+		if ( $max_page >= 9 && ($max_page - $now_page) < 4) {
 			$page_start = $max_page - 8;
-		}
-		if ( $max_page > 9 &&  ($max_page - $now_page) > 4) {
-			$page_start = $now_page - 4;
-			$page_end = $now_page = 4;
+			$page_end = $max_page;
 		}
 		$data['page_item'] = range($page_start,$page_end);
 		// if now page is max page.don't display next page.
