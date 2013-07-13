@@ -6,17 +6,17 @@
 class Blog extends CI_Controller {
 	//Index page of blog.
 	public function index() {
-	//Load 3 articles.
-	$this->load->model('blog_article_model','article');
-	$data['articles'] =  $this->article->index_load();
-	// Load view.
-	$this->load->view('blog/index.php',$data);
-	/* viwe varibles map
-	 * articles --> 3 latest article.It is a array inludeing object
-	 *	| article[?]->title  --> Article title.
-	 *  | article[?]->body 	-->Content of article.
-	 *  | article[?]->create_time -->time of article be created.
-	 */
+		//Load 3 articles.
+		$this->load->model('blog_article_model','article');
+		$data['articles'] =  $this->article->index_load();
+		// Load view.
+		$this->load->view('blog/index.php',$data);
+		/* viwe varibles map
+		* articles --> 3 latest article.It is a array inludeing object
+		*	| article[?]->title  --> Article title.
+		*  | article[?]->body 	-->Content of article.
+		*  | article[?]->create_time -->time of article be created.
+		*/
 	}
 	//When user submit email address.
 	public function getEmail() {
@@ -52,6 +52,58 @@ class Blog extends CI_Controller {
 		 * message --> If has error,the error message will be here.
 		 */
 	}
+	//The list of articles.If don't have any argument.display first page.
+	// 0 explain first page And so on.
+	public function alist($page = 0) {
+		$this->load->model('blog_article_model','article');
+		//How many articles in this page.
+		define('NUMBER_OF_A_PAGE',20);
+		//Count article.		
+		$count = ($this->article->acount());
+		//caculate max page number.
+		$max_page = (($count - ($count % NUMBER_OF_A_PAGE)) / NUMBER_OF_A_PAGE)+1;
+		$data['list'] = $this->article->alist($page,NUMBER_OF_A_PAGE);
+
+		//count the data.if it is'not 20 and the $page is not 0 ,won't display pageNext.
+		$count = count($data['list']);
+		$data['is_display_pageNext'] =(($count == 20 || $page != 0) ?TRUE:FALSE);
+		// set item of div pageNext.
+		// $page add 1 be equal to page number.There is page number.be not the same as $page.
+		// If the useful pages litter than 9,It only display useful page.
+		 $now_page = $data['now_page'] = $page + 1;
+		if ($now_page < 5) { 
+			$page_start = 1;
+		} 
+		if ($max_page <= 9) {
+			$page_start = 1;
+			$page_end = $max_page;
+		}
+		if ( $max_page > 9 && ($max_page - $now_page) <= 4) {
+			$page_end = $max_page;
+			$page_start = $max_page - 8;
+		}
+		if ( $max_page > 9 &&  ($max_page - $now_page) > 4) {
+			$page_start = $now_page - 4;
+			$page_end = $now_page = 4;
+		}
+		$data['page_item'] = range($page_start,$page_end);
+		// if now page is max page.don't display next page.
+		$data['is_display_next_page'] = $now_page == $max_page? FALSE:TRUE;
+		$data['max_page'] = $max_page;
+		$this->load->view('blog/list',$data);
+		/* view varible map
+		 * list --> list of articles title and other.It is a array.Each item is a stdclass.
+		 *  | list[?]->id  --> Id of article.That make the URL of the article need id.
+		 *  | list[?]->title -->Title of the article.
+		 *  | list[?]->author --> name of author.
+		 *  | list[?]->create_time --> time of creating article.
+		 * is_display_pageNext -->If display the div nemed pageNext.
+		 * is_display_next_page --> wherer display next page button.
+		 * now_page --> The page number that visitor visit now.
+		 * page_item -->(array) All of the div '#pageNext' number.
+		 * max_page -->number of max page.
+		 */
+ 	}
 }
 // End of file 
 // File:App/controllers/blog.php

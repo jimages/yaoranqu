@@ -39,40 +39,22 @@
 			<hr />
 			<h1>所有的文章</h1>
 			<ul id="index">
-				<li><a href="#">开站的话</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">新的首页菜单</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">满血复活</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">I was here! 之 那些年，那些海峡</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">黄梅天的烦躁心情</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">一个人的星期天</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">新的家，美的梦</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">毕业季</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">高考这件小事</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">你好世界</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">你最珍贵</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">那些年，我们醉过的夜</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">网站上线，欢迎来访</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">很好，很强大</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">政治局常委会部署新疆维稳：严打暴力犯罪</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">这些标题没有用，只是用来充数的</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">朴槿惠：中国梦与韩国梦就是东北亚的梦想</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">清华拒绝承认四川“二级运动员”高考加分</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">北京现C1F9开头百元假币 验钞机两次识别为真</a><span>2013-06-29 by jimages</span></li>
-				<li><a href="#">人类首度发现星际“大门” 美探测器抵新区域</a><span>2013-06-29 by jimages</span></li>
+				<?php foreach ($list as $each) { ?>
+				<li><a href="http://www.yaoranqu.com/blog/article/<?php echo $each->id; ?>"><?php echo $each->title; ?></a><span><?php echo $each->create_time; ?> by <?php echo $each->name ; ?></span></li>
+				<?php } ?>
 			</ul>
+			<?php if ($is_display_pageNext) { ?>
 			<div id="pageNext" >
-				<a href="a" >下一页</a>
-				<a id="nowPage" >1</a>
-				<a href="a" >2</a>
-				<a href="a" >3</a>
-				<a href="a" >4</a>
-				<a href="a" >5</a>
-				<a href="a" >6</a>
-				<a href="a" >7</a>
-				<a href="a" >8</a>
-				<a href="a" >9</a>
-				<a href="a" >尾页</a>
+				<?php if ($is_display_next_page) { ?>
+				<a href="http://www.yaoranqu.com/blog/alist/<?php echo $now_page; ?>/" >下一页</a>
+				<?php } ?>
+				<?php foreach ($page_item as $number) { ?>
+				<a <?php if($now_page == $number){ ?>id="nowPage"<?php }else{ ?>href='http://www.yaoranqu.com/blog/alist/<?php echo ($number - 1);}?>/' ><?php echo $number;?></a>
+				<?php } ?>
+				<a href='http://www.yaoranqu.com/blog/alist/' >首页</a>
+				<a href="http://www.yaoranqu.com/blog/alist/<?php echo $max_page-1 ?>/" >尾页</a>
 			</div>
+			<?php } ?>
 		</div>
 		<footer>
 			<div id="pageEnd">
