@@ -10,7 +10,7 @@
 				<img src="http://resource.yaoranqu.com/images/html5_24x32.png" alt="本站采用html5技术" />
 			</li>
 			<li>
-				<a href="#" target="_blank" > 
+				<a href="http://www.yaoranqu.com" target="_blank" > 
 					<img src="http://resource.yaoranqu.com/images/logo_31x31.png" alt="窅然去" />
 				</a>
 			</li>

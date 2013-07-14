@@ -12,7 +12,7 @@
 	//The function is that load 3 articles for index.
 	public function index_load() {
 		//get 3 articles 
-		$query = $this->db->query('SELECT title,body,create_time FROM prefix_blog_article ORDER BY id DESC LIMIT 0 ,3;');
+		$query = $this->db->query('SELECT title,body,create_time,id FROM prefix_blog_article ORDER BY id DESC LIMIT 0 ,3;');
 		return $query->result();
 	}
 	public function alist($page,$number) {

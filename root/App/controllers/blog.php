@@ -13,7 +13,8 @@ class Blog extends CI_Controller {
 		$this->load->view('blog/index.php',$data);
 		/* viwe varibles map
 		* articles --> 3 latest article.It is a array inludeing object
-		*	| article[?]->title  --> Article title.
+		*  | article[?]->id -->id of article. 
+		*  | article[?]->title  --> Article title.
 		*  | article[?]->body 	-->Content of article.
 		*  | article[?]->create_time -->time of article be created.
 		*/
@@ -105,6 +106,12 @@ class Blog extends CI_Controller {
 		 * max_page -->number of max page.
 		 */
  	}
+	public function article() {
+		$this->load->view('blog/article');
+	}
+	public function kind() {
+		$this->load->view('blog/kind');
+	}
 }
 // End of file 
 // File:App/controllers/blog.php

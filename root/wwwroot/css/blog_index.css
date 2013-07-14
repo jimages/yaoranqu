@@ -48,10 +48,12 @@
 	margin:auto;
 	padding:30px 0 30px 0;
 	}
-h3 {
+h3,.article a{
 	margin-left:50px;
 	font:500 25px \5B8B\4F53;
 	margin-bottom:20px;
+	color:#000;
+	display:inline-block;
 	}
 p	 {
 	line-height:150%;

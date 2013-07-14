@@ -7,13 +7,13 @@
 			<nav>
 				<ul>
 					<li>
-						<a href="http://www.yaoranqu.com/blog/" target="_blank">首页</a>
+						<a href="http://www.yaoranqu.com/blog/" target="_self">首页</a>
 					</li>
 					<li>
-						<a href="http://www.yaoranqu.com/blog/alist/" target="_blank">所有的</a>
+						<a href="http://www.yaoranqu.com/blog/alist/" target="_self">所有的</a>
 					</li>
 					<li>
-						<a href="#" target="_blank">分类</a>
+						<a href="http://www.yaoranqu.com/blog/kind/" target="_self">分类</a>
 					</li>
 				</ul>
 			</nav>
