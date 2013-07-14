@@ -12,7 +12,7 @@
 	//The function is that load 3 articles for index.
 	public function index_load() {
 		//get 3 articles 
-		$query = $this->db->query('SELECT title,body,create_time,id FROM prefix_blog_article ORDER BY id DESC LIMIT 0 ,3;');
+		$query = $this->db->query('SELECT article.title,article.body,article.create_time,article.id,user.name FROM prefix_blog_article AS article,prefix_user AS user WHERE article.author_id = user.id ORDER BY article.id DESC LIMIT 0 ,3;');
 		return $query->result();
 	}
 	public function alist($page,$number) {
@@ -39,5 +39,15 @@
 		$result =  $query->result();
 		$count = $result[0];
 		return intval($count->count);
+	}
+	public function article($id=0) {
+		$sql = 'SELECT article.title,article.body, article.create_time, user.name, kind.name AS kind
+				FROM prefix_blog_article AS article, prefix_article_kind AS kind, prefix_user AS user
+				WHERE article.id = ?
+				AND article.kind_id = kind.id
+				AND article.author_id = user.id
+				LIMIT 0 , 1;';
+		$query = $this->db->query($sql,array($id));
+		return $query->result();
 	}
 }

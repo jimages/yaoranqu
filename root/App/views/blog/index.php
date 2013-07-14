@@ -40,6 +40,7 @@
 					<?php
 						/* article body */echo $article->body; ?>
 					<footer>
+						<span><?php echo $article->create_time.'&nbsp;by&nbsp;'.$article->name; ?></span>
 					</footer>
 				</div>
 			</article>

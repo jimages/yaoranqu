@@ -56,10 +56,15 @@ h3,.article a{
 	display:inline-block;
 	}
 p	 {
-	line-height:150%;
+	line-height:180%;
 	margin:30px auto;
 	text-indent:2em;
 	width:900px;
+	}
+.article span {
+	float:right;
+	margin-right:30px;
+	font:300 15px \6977\4F53;
 	}
 #mainBody article {
 	font:400 15px \65B0\5B8B\4F53;

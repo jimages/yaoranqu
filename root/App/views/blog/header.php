@@ -12,9 +12,6 @@
 					<li>
 						<a href="http://www.yaoranqu.com/blog/alist/" target="_self">所有的</a>
 					</li>
-					<li>
-						<a href="http://www.yaoranqu.com/blog/kind/" target="_self">分类</a>
-					</li>
 				</ul>
 			</nav>
 		</div>	

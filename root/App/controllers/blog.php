@@ -16,6 +16,7 @@ class Blog extends CI_Controller {
 		*  | article[?]->id -->id of article. 
 		*  | article[?]->title  --> Article title.
 		*  | article[?]->body 	-->Content of article.
+		*  | article[?]->name -->author's name.
 		*  | article[?]->create_time -->time of article be created.
 		*/
 	}
@@ -106,11 +107,13 @@ class Blog extends CI_Controller {
 		 * max_page -->number of max page.
 		 */
  	}
-	public function article() {
-		$this->load->view('blog/article');
-	}
-	public function kind() {
-		$this->load->view('blog/kind');
+	public function article($id = 1) {
+		//Load model.
+		$this->load->model('blog_article_model','article');
+		//Get article data.
+		$data['article'] = $this->article->article($id);
+		$data['article'] = $data['article'][0];
+		$this->load->view('blog/article',$data);
 	}
 }
 // End of file 
