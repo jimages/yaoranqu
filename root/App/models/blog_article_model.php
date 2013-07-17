@@ -50,4 +50,32 @@
 		$query = $this->db->query($sql,array($id));
 		return $query->result();
 	}
+	//Function: create_article.
+	// This function will create a now article.
+	//It need 3 arguments,including titile,article type,content.
+	//It return TRUE or FALSE.Explain seccess or fail.
+	public function create_article ($title,$type,$content) {
+		//find type first
+		$find_sql = 'SELECT id FROM prefix_article_kind WHERE name=? LIMIT 0,1';
+		$query = $this->db->query($find_sql,array($type));
+		$result = $query->result();
+		if(count($result) == 0)
+			return FALSE;
+		$type_id = $result[0]->id;
+		//load session.
+		$this->load->library('session');
+		//Set creation sql
+		$sql = 'INSERT INTO prefix_blog_article (title,kind_id,author_id,body) VALUES ( ? ,?, ?, ?)';
+		$insert = array(
+			$title,
+			$type_id,
+			$this->session->userdata('user_id'),
+			$content);
+		//insert data.
+		if($this->db->query($sql,$insert)) {
+			return TRUE;
+		}else{
+			return FALSE;
+		}	
+	}
 }

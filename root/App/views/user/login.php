@@ -14,7 +14,7 @@
 		<div id="login">
 			<h1>窅然去·登录</h1>
 			<span id="error" ></span>
-			<form method="post" action="#" accept-charset="UTF-8" >
+			<form method="post" action="http://www.yaoranqu.com/user/check_login/" accept-charset="UTF-8" >
 				<ul>
 					<li>
 						<label for="username">用户名</label>
@@ -55,6 +55,8 @@
 				</ul>
 			</div>
 		</footer>
+		<!-- load function -->
+		<script type='text/javascript' src='http://resource.yaoranqu.com/js/include/md5.js'></script>
 		<!-- setup js -->
 		<script type="text/javascript" src="http://resource.yaoranqu.com/js/login.js"></script>
 	</body>

@@ -1,5 +1,5 @@
 "use strict";
-/* Date:July 4.2013
+/* Since:July 4.2013
  * Author:jimages
  * The javascript is for admin.
  */
@@ -96,3 +96,41 @@ function changePage(pointPage) {
 		presentPage = pointPage;
 	}
 }
+$('#createArticle').submit(function (event) {
+	event.preventDefault();
+	var title = $('#textTitle').val();
+	var type = $('input[name=textType]').val();
+	KindEditor.sync('#textContent');
+	var content = $('#textContent').val();
+	//post data.
+	$.post('http://www.yaoranqu.com/admin/create_article/',
+			{
+				'title' : title,
+				'textType' : type,
+				'textContent' : content
+			},create_succ,'json');
+});
+function create_succ(data) {
+	if(data.code == 1) {
+		//If code is 1.explain that there is error.
+		var error = data.error;
+		switch(error) {
+			case 'E003':
+				alert('你还没有登录。');
+				break;
+			case 'E004':
+				alert('创建文章出现错误。');
+				break;
+			case 'E000':
+				alert('你还没有输入');
+				break;
+			default:
+				alert('未知错误');
+		}
+		return false;
+	}
+	alert('OK.');
+}
+		
+	
+	

@@ -89,7 +89,7 @@
 			</section>
 			<section>
 				<h4>编写新的文章</h4>
-				<form action="#" method="post" accept-charset="UTF-8" >
+				<form action="#" method="post" accept-charset="UTF-8" id='createArticle' >
 					<input type="text" name="title" id="textTitle"/>
 					<label for="textTitle" id="textTitleNotice">文章题目</label>
 					<span id="selectedType">请选择类目</span>

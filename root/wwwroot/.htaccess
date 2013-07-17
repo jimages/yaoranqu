@@ -11,5 +11,5 @@ RewriteRule ^(.*)$ http://www.yaoranqu.com/$1 [R=301,L]
 #It is for CodeIgniter.remove index.php.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [NS,QSA,L]
+RewriteRule ^(.*)$ /index.php/$1 [NS,QSA,L]
 </IfModule>
