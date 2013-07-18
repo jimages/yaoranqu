@@ -10,7 +10,7 @@
 	//check date.
 	//be ready
 	var email = $('#emailInput').val();
-	var email_regex = new RegExp('^[a-zA-Z][a-zA-Z0-9.\\-_]*@[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9]?(\\.[a-zA-Z]+)+\\.?$');
+	var email_regex = new RegExp('^[a-zA-Z0-9][a-zA-Z0-9.\\-_]*@[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9]?(\\.[a-zA-Z]+)+\\.?$');
 	if ( !email_regex.test(email)) {
 		email_err('E000');
 		return false;

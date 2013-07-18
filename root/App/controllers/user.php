@@ -46,6 +46,7 @@
 			 */
 	}
 	public function test () {
-		echo time ( );
+		$this->load->model('user_model','user');
+		echo $this->user->encrypt('jimages',md5(md5('WSYGCXY2012anqu;')));
 	}
 }
