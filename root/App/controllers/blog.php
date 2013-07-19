@@ -4,6 +4,13 @@
  * The class is blog 
  */
 class Blog extends CI_Controller {
+	//check user browner.
+	public function __construct() {
+	parent::__construct();
+	//load check model.
+	$this->load->model('other_model','other');
+	$this->other->check_browser();
+	}
 	//Index page of blog.
 	public function index() {
 		//Load 3 articles.
@@ -114,6 +121,8 @@ class Blog extends CI_Controller {
 		$data['article'] = $this->article->article($id);
 		$data['article'] = $data['article'][0];
 		$this->load->view('blog/article',$data);
+	}
+	public function test() {
 	}
 }
 // End of file 

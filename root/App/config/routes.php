@@ -41,6 +41,7 @@
 $route['default_controller'] = "blog";
 $route['404_override'] = '';
 $route['login'] = 'user/login';
+$route['say_goodbye'] = 'other/say_goodbye';
 
 
 /* End of file routes.php */
