@@ -5,7 +5,7 @@
 		<meta name="author" content="jimages" >
 		<meta name="description" content="这是窅然去·记录网站的文章。题目为开战的话。" >
 		<meta name="keywords" content="文章,记录,窅然去,网站历程" >
-		<title>2013年7月2日-开站——窅然去·记录</title>
+		<title><?php echo $article->title.'——窅然去·记录'?></title>
 		<link rel="stylesheet" type="text/css" href="http://resource.yaoranqu.com/css/blog_article.css" />
 		<link rel="stylesheet" type="text/css" href="http://resource.yaoranqu.com/css/common.css" />
 		<link rel="stylesheet" type="text/css" href="http://resource.yaoranqu.com/css/blog_common.css" />
