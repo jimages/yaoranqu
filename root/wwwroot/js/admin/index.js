@@ -60,28 +60,6 @@ $("#textTitle").blur(function() {
 		}
 	}
 );
-//When the type click,display options div.
-function typeClick() {
-	var display = $('#typeOption').css('display');
-	if(display == 'none')
-	{	
-		$('#typeOption').css('display','inline-block');
-	 } else { 
-		$('#typeOption').css('display','none');
-		//change the hidden input.
-		var typeValue = $(this).text()
-		$('#index input[type=hidden]').val(typeValue);
-		//Remove old element
-		$('#selectedType').remove();
-		//create new one.
-		$('#textTitleNotice').after('<span id="selectedType">'+typeValue+'</span>');
-		//register event again.
-		$('#selectedType').click(typeClick);
-	}
-}
-//Register event.
-$('#selectedType').click(typeClick);
-$('#typeOption li').click(typeClick);
 //when click one page.Present page remove.Page that be clicked display.
 // present page
 var presentPage = $('#index');
@@ -131,6 +109,101 @@ function create_succ(data) {
 	}
 	alert('OK.');
 }
+//aiax function for add link.
+$('#addLink').submit(function (envent) {
+	//stop default action.
+	envent.preventDefault();
+	//get date.
+	var name = $('input[name=name]').val();
+	var url = $('input[name=url]').val();
+	var description = $('input[name=description]').val();
+	var position = $('input[name=position]').val();
+	if ( name == '' || url == '' || position == '') {
+		alert('名字，URL，位置不能为空');
+	}
+	//start ajax
+	$.post('http://www.yaoranqu.com/admin/add_link',
+			{
+				'name' : name,
+				'url':url,
+				'position':position,
+				'description':description
+			},_add_link_succ,'json');
+	});
+//If send seccessful.
+function _add_link_succ(data) {
+	if(data.code == '1'){
+		//If code is 1.Explain that has error.output it.
+		alert(data.message);
+	} else {
+		alert('OK');
+		//Then clean data.
+		$('input[name=name]').val('');
+		$('input[name=url]').val('');
+		$('input[name=description]').val('');
+		$('input[name=position]').val('');
+		//clean label.
+		_label_clean($('#linkNameNotice'));
+		_label_clean($('#linkUrlNotice'));
+		_label_clean($('#linkDescriptionNotice'));
+		//clean select.
+		$('#linkPositionNotice').html('请选择位置');
+	}
+}
+//This is a manager for select.
+//Notice is used to when notice clicked. display select.
+//Value is used to save and submit selected option. 
+//Option must be a class element.
+function select_manager(notice,select,option,value) {
+	//first check varticle is valid.
+	if( notice.length == 0 || select.length == 0 || value.length == 0 || option.length < 2) {
+		window.alert('The arguments is incorrect. in function select_manager.');
+		return false;
+	}
+	//register function
+	//when noticle click.dispaly selection
+	notice.click(function () {
+		var display = select.css('display');
+		if (display == 'none')
+			select.css('display','inline-block');
 		
-	
-	
+	});
+	//When one option click.write into value;
+	option.click(function () {
+		var data = $(this).text();
+		value.val(data);
+		//Then write to notice.
+		notice.text(data);
+		//Hide select.
+		select.css('display','none');
+	});
+}
+//register select.
+select_manager($('#selectedType'),$('ul#articleType'),$('ul#articleType .option'),$('input[name=textType]'));
+select_manager($('#linkPositionNotice'),$('ul#linkPosition'),$('ul#linkPosition .option'),$('input[name=position]'));
+//Label notice auto manager
+//The function need 2 arguments
+//text is the text.
+//label is the label.
+//auto register when label click.
+function _label_clean(label) {
+			label.css('display','inline-block');
+}
+function label_manager(text,label) {
+	//Register that When text facous.hide label.
+	text.focus( function () {
+		label.css('display','none');
+		});
+	text.blur(function (){
+		if(text.val() == '')
+			_label_clean(label);});
+	//check text is empty now
+	var data = text.val();
+	if (data != '') {
+		label.css('display','none');
+	}
+}
+//register
+label_manager($('#linkName'),$('#linkNameNotice'));
+label_manager($('#linkUrl'),$('#linkUrlNotice'));
+label_manager($('#linkDescription'),$('#linkDescriptionNotice'));

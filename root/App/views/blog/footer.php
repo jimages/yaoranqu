@@ -1,4 +1,38 @@
 <footer>
+	<section id='link'>
+		<h4>朋友</h4>
+		<img id='linkLeft' class='linkButton' alt='向左移动' src='http://resource.yaoranqu.com/images/footer/left.png' height='40' width='40' />
+		<div id='linkContent'>
+			<ul id='linkContainer'>
+			<?php 
+				//Load model.
+				$this->load->model('other_model','other');
+				$data = $this->other->get_links();
+				foreach($data as $link): ?>
+				<li class='linkItem <?php switch($link->type):
+					case '1': 
+						echo 'top';
+						break;
+					case '2':
+						echo 'middle';
+						break;
+					case '3':
+						echo 'bottom';
+						break;
+					default:
+						break;
+					endswitch;
+					?>'>
+					<ul>
+						<li><a href="<?php echo $link->url; ?>"><?php echo $link->name; ?></a></li>
+						<li><?php echo $link->description; ?></li>
+					</ul>
+				</li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
+		<img id='linkRight' class='linkButton' alt='向右移动' src='http://resource.yaoranqu.com/images/footer/right.png' height='40' width='40' />
+	</section>
 	<div id="pageEnd">
 		<ul>
 			<li>
@@ -23,3 +57,4 @@
 		</ul>
 	</div>
 </footer>
+<script type="text/javascript" src="http://resource.yaoranqu.com/js/footer.js"></script>

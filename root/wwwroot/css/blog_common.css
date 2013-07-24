@@ -1,5 +1,5 @@
 /* author:jimages
- * date:Jun 30 2013
+ * Since:Jun 30 2013
  * common stylesheet file of blog instead of admin.
  */
 @charset "UTF-8"
@@ -40,7 +40,7 @@
 	text-decoration:none;
 	}
 #pageEnd {
-	background-image:url(http://resource.yaoranqu.com/images/footer.png);
+	background:url(http://resource.yaoranqu.com/images/footer.png) bottom center;
 	height:126px;
 	background-repeat:repeat-x;
 	}
@@ -64,3 +64,62 @@ h1 {
 	text-align:center;
 	padding-top:30px;
 	}
+/* footer links start */
+footer #link {
+	overflow:auto;
+	display:block;
+	background-color:#fff;
+}
+footer #link h4 {
+	font:500 23px \5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',\u5E7C\u5706;
+	background-color:#f2f2f2;
+	padding-left:30px;
+	border-left:10px solid #3588b7;
+}
+.linkButton {
+	float:left;
+	border:0px solid black;
+	cursor:pointer;
+	display:inline-block;
+	margin-top:30px;
+	}
+footer #linkContent {
+	float:left;
+	height:100px;
+	width:880px;
+	display:inline-block;
+	overflow:hidden;
+	}
+footer #linkContent .linkItem{
+	float:left;
+	margin:0;
+	padding:0;
+	display:inline-block;
+	width:146px;
+	position:relative;
+	margin:auto 0.5px;
+}
+footer #linkContent .linkItem a{
+	color:#000;
+}
+footer #linkContent .linkItem ul li:first-child{
+	font:500 15px \5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',\u5E7C\u5706,sans-serif;
+	}
+footer #linkContent .linkItem ul li:last-child{
+	font:100 13px 'Segoe UI',\9ED1\4F53,\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',sans-serif;
+	}
+footer #linkContainer {
+	width:10000px;
+	position:relative;
+	height:100px;
+}
+/* define top middle bottom item */
+footer #linkContainer .top {
+	top:0px;
+}
+footer #linkContainer .middle {
+	top:30%;
+}
+footer #linkContainer .bottom {
+	top:47%;
+}

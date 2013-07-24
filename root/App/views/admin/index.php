@@ -35,7 +35,7 @@
 		<aside id="pageAside">
 			<div id="selectedBackground" ></div>
 			<ul>
-				<li><a href="#"><img alt="用户" src="http://resource.yaoranqu.com/images/admin/user.png" width="34px" height="34px"/></a>
+				<li><a href="#"><img alt="用户" src="http://resource.yaoranqu.com/images/admin/user.png" width="34" height="34"/></a>
 					<a href="#"><span>Jimages</span></a>
 				</li>
 				<li>
@@ -43,6 +43,9 @@
 				</li>
 				<li>
 					<a href="#" class="menu" onclick='changePage($("#article"));'>文章</a>
+				</li>
+				<li>
+					<a href="#" class="menu" onclick='changePage($("#website"));'>站务</a>
 				</li>
 			</ul>
 			<!-- copyright -->
@@ -89,15 +92,15 @@
 			</section>
 			<section>
 				<h4>编写新的文章</h4>
-				<form action="#" method="post" accept-charset="UTF-8" id='createArticle' >
+				<form action="#" method="post" accept-charset="UTF-8" id='addArticle' >
 					<input type="text" name="title" id="textTitle"/>
 					<label for="textTitle" id="textTitleNotice">文章题目</label>
-					<span id="selectedType">请选择类目</span>
-						<ul id='typeOption'>
-							<li>生活见闻</li>
-							<li>开发纪实</li>
-							<li>乱七八糟</li>
-							<li>网站历程</li>
+					<span id="selectedType" class='select'>请选择类目</span>
+						<ul id='articleType' class='typeOption'>
+							<li class='option'>生活见闻</li>
+							<li class='option'>开发纪实</li>
+							<li class='option'>乱七八糟</li>
+							<li class='option'>网站历程</li>
 						</ul>
 					<input type="hidden" name="textType" value=""/>
 					<!-- load editor -->
@@ -298,6 +301,28 @@
 			<section id='aticleType'>
 			<h4>文章分类管理</h4>
 			<p>这里的东西有待添加</p>
+			</section>
+		</article>
+		<article class='page' id='website' >
+			<h3>网站事务</h3>
+			<section>
+				<h4>添加友链</h4>
+				<form action='http://www.yaoranqu.com/admin/add_link/' method='get' accept-charset='utf8' id='addLink'>
+					<input type="text" name="name" id="linkName"/>
+					<label for="linkName" id="linkNameNotice">网站名称</label>
+					<input type="url" name='url' id='linkUrl'/>
+					<label for='linkUrl' id='linkUrlNotice'>网站地址</label>
+					<span id="linkPositionNotice" class='select'>请选择位置</span>
+					<ul id='linkPosition' class='typeOption'>
+						<li class='option'>上</li>
+						<li class='option'>中</li>
+						<li class='option'>下</li>
+					</ul>
+					<input type="hidden" name="position" value=""/>
+					<input type='text' name='linkDescription' id='linkDescription'/>
+					<label for='linkDescription' id='linkDescriptionNotice'>描述</label>
+					<input type='submit' value='提&nbsp;交' />
+				</form>
 			</section>
 		</article>
 	<script type="text/javascript" src="http://resource.yaoranqu.com/js/admin/index.js"></script>
