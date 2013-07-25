@@ -319,7 +319,7 @@
 						<li class='option'>下</li>
 					</ul>
 					<input type="hidden" name="position" value=""/>
-					<input type='text' name='linkDescription' id='linkDescription'/>
+					<input type='text' name='description' id='linkDescription'/>
 					<label for='linkDescription' id='linkDescriptionNotice'>描述</label>
 					<input type='submit' value='提&nbsp;交' />
 				</form>

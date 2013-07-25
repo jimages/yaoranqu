@@ -1,3 +1,14 @@
+<div id="ad">
+	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- 窅然去首页 -->
+	<ins class="adsbygoogle"
+		style="display:block;width:728px;height:90px;margin:auto;"
+		data-ad-client="ca-pub-5495447425243679"
+		data-ad-slot="6878046749"></ins>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
 <footer>
 	<section id='link'>
 		<h4>朋友</h4>

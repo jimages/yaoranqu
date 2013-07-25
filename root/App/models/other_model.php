@@ -37,6 +37,8 @@
 	}
 	public function add_link($name,$url,$description,$position) {
 		//change position value.
+		if(empty($description))
+			$description = NULL;
 		if(strcasecmp($position,'') == 0)
 			$position = NULL;
 		switch($position) {

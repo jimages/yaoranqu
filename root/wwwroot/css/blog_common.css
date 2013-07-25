@@ -123,3 +123,8 @@ footer #linkContainer .middle {
 footer #linkContainer .bottom {
 	top:47%;
 }
+/* For Advertisement */
+#ad {
+	width:100%;
+	background-color:#fff;
+	}
