@@ -18,8 +18,22 @@
 	<body>
 		<?php require('header.php'); ?>
 		<div id="mainBody">
+			<?php foreach ($articles as $article) { ?>
+			<article>
+				<div class="article">
+					<header>
+						<a href='http://www.yaoranqu.com/blog/article/<?php echo $article->id ;?>/' ><h3><?php echo $article->title; ?></h3></a>
+					</header>
+					<?php
+						/* article body */echo $article->body; ?>
+					<footer>
+						<span><?php echo $article->create_time.'&nbsp;by&nbsp;'.$article->name; ?></span>
+					</footer>
+				</div>
+			</article>
+			<?php } ?>
 			<div id="getEmail">
-				<p>&nbsp;&nbsp;&nbsp;&nbsp;您好，本网站正在建设中，您现在看到的是本站的开发博客。您可以将您的电子邮件留下以便于当网站建设完成并上线后，我们将以电子邮件的形式提醒您。我们将妥善保存您的信息。</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;您好，本网站正在持续建设中，您现在看到的是本站的记录。您可以将您的电子邮件留下以便于当网站建设发生重大进展时，我们将以电子邮件的形式提醒您。我们将妥善保存您的信息。</p>
 				<span>您的电子邮件：</span>
 				<form accept-charset="utf8" target="_blank" name="getEmail" action='/blog/getEmail' method='get'>
 					<ul>
@@ -32,22 +46,6 @@
 					</ul>
 				</form>
 			</div>
-			<?php foreach ($articles as $article) { ?>
-			<img src="http://resource.yaoranqu.com/images/split.png" alt="分割条" />
-			<article>
-				<div class="article">
-					<header>
-						<a href='http://www.yaoranqu.com/blog/article/<?php echo $article->id ;?>/' ><h3><?php
-							/*article title */echo $article->title; ?></h3></a>
-					</header>
-					<?php
-						/* article body */echo $article->body; ?>
-					<footer>
-						<span><?php echo $article->create_time.'&nbsp;by&nbsp;'.$article->name; ?></span>
-					</footer>
-				</div>
-			</article>
-			<?php } ?>
 		</div>
 		<?php require('footer.php'); ?>
 		<script type='text/javascript' src='http://resource.yaoranqu.com/js/blog/index.js'></script>
