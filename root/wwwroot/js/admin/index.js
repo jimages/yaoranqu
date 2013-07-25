@@ -74,7 +74,7 @@ function changePage(pointPage) {
 		presentPage = pointPage;
 	}
 }
-$('#createArticle').submit(function (event) {
+$('#addArticle').submit(function (event) {
 	event.preventDefault();
 	var title = $('#textTitle').val();
 	var type = $('input[name=textType]').val();
@@ -83,10 +83,10 @@ $('#createArticle').submit(function (event) {
 	//post data.
 	$.post('http://www.yaoranqu.com/admin/create_article/',
 			{
-				'title' : title,
-				'textType' : type,
-				'textContent' : content
-			},create_succ,'json');
+				"title" : title,
+				"textType" : type,
+				"content" : content
+			},create_succ);
 });
 function create_succ(data) {
 	if(data.code == 1) {

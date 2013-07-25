@@ -35,10 +35,10 @@
 		//Get post data.Set short name.
 		$title = $this->input->post('title');
 		$type = $this->input->post('textType');
-		$content =  $this->input->post('textContent');
-		if(!$title || !$type || !$content ) {
+		$content = $this->input->post('content');
+		if(empty($title) || empty($type) || empty($content) ) {
 			$data = array (
-				'code' => '1',
+				 'code' => '1',
 				'error' => 'E000');
 			$this->load->view('admin/return_article',$data);
 			return FALSE;
@@ -69,10 +69,10 @@
 	//the function is to add a link to other website.
 	public function add_link() {
 		//create shoet name
-		$name ='jimages';// $this->input->post('name');
-		$url ='123';// $this->input->post('url');
-		$position = '上';;//$this->input->post('position');
-		$description = '';//$this->input->post('description');
+		$name = $this->input->post('name');
+		$url =$this->input->post('url');
+		$position = $this->input->post('position');
+		$description = $this->input->post('description');
 		//check data.
 		if($name == FALSE || $url == FALSE || $position == FALSE) {
 			$data = array('code'=>1,

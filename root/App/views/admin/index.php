@@ -92,7 +92,7 @@
 			</section>
 			<section>
 				<h4>编写新的文章</h4>
-				<form action="#" method="post" accept-charset="UTF-8" id='addArticle' >
+				<form action="http://www.yaoranqu.com/admin/create_article/" method="post" accept-charset="UTF-8" id='addArticle' >
 					<input type="text" name="title" id="textTitle"/>
 					<label for="textTitle" id="textTitleNotice">文章题目</label>
 					<span id="selectedType" class='select'>请选择类目</span>
@@ -104,7 +104,7 @@
 						</ul>
 					<input type="hidden" name="textType" value=""/>
 					<!-- load editor -->
-					<textarea id="textContent" name="textContent" ></textarea>
+					<textarea id="textContent" name="content" ></textarea>
 					<input type="submit" id="textSubmit" value="提交"/>
 				</form>
 			</section>
