@@ -1,13 +1,15 @@
 <div id="ad">
-	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- google ad bnnaer -->
-	<ins class="adsbygoogle"
-		style="display:block;width:728px;height:90px;margin:auto;"
-		data-ad-client="ca-pub-5495447425243679"
-		data-ad-slot="6878046749"></ins>
-	<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
+	<!-- nuffnang -->
+	<script type="text/javascript">
+		nuffnang_bid = "1985c7a0a1706f8c96cb77229ae08117";
+		document.write( "<div id='nuffnang_lb'></div>" );
+		(function() {	
+		var nn = document.createElement('script'); nn.type = 'text/javascript';    
+		nn.src = 'http://synad2.nuffnang.com.cn/lb2.js';    
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(nn, s.nextSibling);
+		})();
 	</script>
+<!-- nuffnang-->
 </div>
 <footer>
 	<section id='link'>
