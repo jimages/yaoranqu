@@ -41,7 +41,7 @@
 		return intval($count->count);
 	}
 	public function article($id=0) {
-		$sql = 'SELECT article.title,article.body, article.create_time, user.name, kind.name AS kind
+		$sql = 'SELECT article.title,article.body, article.create_time, user.name, kind.name AS kind , article.id
 				FROM prefix_blog_article AS article, prefix_article_kind AS kind, prefix_user AS user
 				WHERE article.id = ?
 				AND article.kind_id = kind.id

@@ -1,6 +1,6 @@
 <div id="ad">
 	<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- 窅然去首页 -->
+	<!-- google ad bnnaer -->
 	<ins class="adsbygoogle"
 		style="display:block;width:728px;height:90px;margin:auto;"
 		data-ad-client="ca-pub-5495447425243679"
@@ -60,6 +60,9 @@
 				</a>
 			</li>
 			<li>
+				<span>Copyright ©2013 Yaoranqu</span>
+			</li>
+			<li>
 				<a href="http://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank" >本站遵守署名-相同方式共享 3.0 未本地化版本</a>
 			</li>
 			<li id="icp" >
@@ -69,3 +72,4 @@
 	</div>
 </footer>
 <script type="text/javascript" src="http://resource.yaoranqu.com/js/footer.js"></script>
+<script type='text/javascript' src='http://resource.yaoranqu.com/js/blog/common.js'></script>

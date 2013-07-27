@@ -7,6 +7,7 @@
 	padding:20px 0px;
 	width:870px;
 	margin:auto;
+	text-align:center;
 	}
 #getEmail p {
 	font: 400 18px \6977\4F53;
@@ -44,8 +45,13 @@
 	width:175px;
 	height:47px
 	}
+#mainBody {
+	background-color:transparent!important;
+	}
 .article {
-	margin:auto;
+	border-radius:10px;
+	margin:30px 0;
+	background-color:#f8f6f6;
 	padding:30px 0 30px 0;
 	}
 h3{

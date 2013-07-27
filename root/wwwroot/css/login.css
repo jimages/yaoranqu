@@ -56,6 +56,20 @@ input#loginSubmit {
 	left:0px;
 	width:100%;
 	background-color:#f4f4f4;
+	margin:auto;
+	}
+#pageEnd ul {
+	display:block;
+	text-align:center;
+	}
+#pageEnd a,span {
+	font: 300 13px \5B8B\4F53;
+	color:#6b6b6b;
+	line-height:5px;
+	text-decoration:none;
+	}
+#pageEnd li:last-child{
+	padding-left:333px;
 	}
 #pageEnd ul {
 	padding-top:20px

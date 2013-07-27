@@ -2,10 +2,10 @@
  * Since:Jun 30 2013
  * common stylesheet file of blog instead of admin.
  */
-@charset "UTF-8"
+@charset "UTF-8";
 /*header sheetstyle */
 #pageStart {
-	margin-top:30px;
+	margin-top:15px;
 	}
 #pageStart nav,#nav{
 	margin-top:0px;
@@ -19,7 +19,7 @@
 	width:96px;
 	}
 #pageStart a {
-	font:600 20px \5FAE\8F6F\96C5\9ED1;
+	font:500 20px \5FAE\8F6F\96C5\9ED1;
 	color:white;
 	}
 #pageStart ul{
@@ -29,18 +29,21 @@
 /*footer sheetstyle start */
 #pageEnd{
 	text-align:center;
+	margin-bottom:10px;
 	}
 #pageEnd ul li {
 	vertical-align:middle
 }
-#pageEnd a {
+#pageEnd a,span {
 	font: 300 13px \5B8B\4F53;
 	color:#6b6b6b;
 	line-height:5px;
 	text-decoration:none;
 	}
 #pageEnd {
-	background:url(http://resource.yaoranqu.com/images/footer.png) bottom center;
+	background-color:#fff;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
 	height:126px;
 	background-repeat:repeat-x;
 	}
@@ -48,12 +51,19 @@
 	padding: 70px 0px 20px 0px!important;
 	}
 #icp {
-	padding-left:333px;
+	padding-left:185px;
 	}
+#getEmail {
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	width:100%;
+	background-color:#fff;
+}
 /*footer sheetstyle end */
 /*global stylesheet */
 body {
-	background-color:#e6e4e4;
+	background:url("http://resource.yaoranqu.com/images/back.jpg") fixed no-repeat;
+	background-position:50% 50%;
 	}
 #mainBody {
 	margin:20px auto 0px auto;

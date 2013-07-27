@@ -23,8 +23,25 @@
 				<span>文章分类：<?php echo $article->kind;?></span>
 				<span><?php echo $article->create_time.'&nbsp;by&nbsp;'.$article->name;?></span>
 				</footer>
+				<aside>
+				<!-- Duoshuo Comment BEGIN -->
+				<div class="ds-thread" data-thread-key="<?php echo $article->id ?>" data-title="<?php echo $article->title ?>"></div>
+				<script type="text/javascript">
+					var duoshuoQuery = {short_name:"yaoranqu"};
+					(function() {
+						var ds = document.createElement('script');
+						ds.type = 'text/javascript';ds.async = true;
+						ds.src = 'http://static.duoshuo.com/embed.js';
+						ds.charset = 'UTF-8';
+						(document.getElementsByTagName('head')[0] 
+						|| document.getElementsByTagName('body')[0]).appendChild(ds);
+					})();
+				</script>
+				<!-- Duoshuo Comment END -->
+				</aside>
 			</article>	
 		</div>
 		<?php require('footer.php'); ?>
+		<script type='text/javascript' src='http://resource.yaoranqu.com/js/blog/common.js'></script>
 	</body>
 </html>
