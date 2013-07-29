@@ -90,4 +90,28 @@
 		//sent data to view.
 		$this->load->view('admin/add_link.php',$data);
 	}
+	//Create a now day day say.
+	public function day_day_say() {
+		//Create short name
+		$content = $this->input->get('content');
+		//load library
+		$this->load->model('other_model','other');
+		//clean xss.
+		$content = $this->security->xss_clean($content);
+		//check data 
+		if(empty($content)) {
+			$data['code'] = 1;
+			$data['message'] = '你的输入为空，或者含有非法字符';
+			$this->load->view('admin/day_day_say',$data);
+			return false;
+
+		}
+		if ($this->other->day_day_say($content)) {
+			$data['code'] = 0;
+		} else {
+			$data = array( 'code'=>1,
+							'message'=>'数据在存储过程中出现错误');
+		}
+		$this->load->view('admin/day_day_say',$data);
+	}
 }

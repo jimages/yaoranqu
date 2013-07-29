@@ -11,9 +11,27 @@
 	}
 	//The function is that load 3 articles for index.
 	public function index_load() {
+		//start cache.
+		$this->load->driver('cache',array('adapter' => 'file'));
 		//get 3 articles 
-		$query = $this->db->query('SELECT article.title,article.body,article.create_time,article.id,user.name FROM prefix_blog_article AS article,prefix_user AS user WHERE article.author_id = user.id ORDER BY article.id DESC LIMIT 0 ,3;');
-		return $query->result();
+		if(! $result = $this->cache->get('index_articles')) {
+			$query = $this->db->query('SELECT article.title,article.body,article.create_time,article.id,user.name FROM prefix_blog_article AS article,prefix_user AS user WHERE article.author_id = user.id ORDER BY article.id DESC LIMIT 0 ,3;');
+			$result = $query->result();
+			$this->cache->save('index_articles',$result,10);
+		}
+		$data['articles'] = $result;
+		//get day day say
+		if (! $result = $this->cache->get('day_day_say')) {
+		$query = $this->db->query('SELECT content,DATE(create_time) AS create_time 
+									FROM prefix_day_day_say
+									ORDER BY id DESC
+									LIMIT 0,1;');
+			$result = $query->result();
+			$result = $result[0];
+			$this->cache->save('day_day_say',$result,60);
+		}
+		$data['day_day_say'] = $result;
+		return $data;
 	}
 	public function alist($page,$number) {
 		//compute data.

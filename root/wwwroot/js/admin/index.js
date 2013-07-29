@@ -150,6 +150,29 @@ function _add_link_succ(data) {
 		$('#linkPositionNotice').html('请选择位置');
 	}
 }
+$('#addDayDaySay').submit(function (envent)　{
+		envent.preventDefault();
+		//Get data.
+		var content = $('#dayDaySayContent').val();
+		if(content == '') {
+			alert('不能为空');
+			return false;
+		}
+		$.get('http://www.yaoranqu.com/admin/day_day_say/',
+			{
+				"content" : content 
+			},_day_day_say_succ,'json');
+});
+function _day_day_say_succ (data) {
+	if(data.code == '1') {
+		alert(data.message);
+		return false;
+	} else {
+		alert('OK');
+		$('#dayDaySayContent').val('');
+		_label_clean($('#dayDaySayContent'));
+	}
+}		
 //This is a manager for select.
 //Notice is used to when notice clicked. display select.
 //Value is used to save and submit selected option. 
@@ -207,3 +230,4 @@ function label_manager(text,label) {
 label_manager($('#linkName'),$('#linkNameNotice'));
 label_manager($('#linkUrl'),$('#linkUrlNotice'));
 label_manager($('#linkDescription'),$('#linkDescriptionNotice'));
+label_manager($('#dayDaySayContent'),$('#dayDaySayContentNotice'));

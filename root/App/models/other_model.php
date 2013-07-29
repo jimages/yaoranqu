@@ -58,6 +58,10 @@
 		$sql= 'INSERT INTO prefix_link (name,url,description,type) VALUES (?,?,?,?);';
 		return $this->db->query($sql,array( $name,$url,$description,$position)); 
 	}
+	public function day_day_say($content) {
+		$sql = 'INSERT INTO prefix_day_day_say (content) VALUES (?);';
+		return $this->db->query($sql,array($content));
+	}
 }
 //End Of File 
 //App/models/other_model.php

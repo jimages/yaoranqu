@@ -4,137 +4,170 @@
  */
 @charset "UTF-8";
 /*header sheetstyle */
-#pageStart {
-	margin-top:15px;
-	}
-#pageStart nav,#nav{
-	margin-top:0px;
-	height:50px;
-	background-color:#676565;
-	display:block;
-	}
+@media  all {
+	#pageStart {
+		margin-top:15px;
+		}
+	#pageStart nav{
+		margin-top:0px;
+		height:50px;
+		background-color:#676565;
+		display:block;
+		}
 
-#pageStart  li {
-	height:inherit;
-	width:96px;
+	#pageStart  li {
+		height:inherit;
+		width:96px;
+		}
+	#pageStart a {
+		font:500 20px \5FAE\8F6F\96C5\9ED1;
+		color:white;
+		}
+	#pageStart ul{
+		padding:10px 0px 0px 50px;
+		}
+	/*header sheetstyle end */
+	/*footer sheetstyle start */
+	#pageEnd{
+		text-align:center;
+		margin-bottom:10px;
+		}
+	#pageEnd ul li {
+		vertical-align:middle
 	}
-#pageStart a {
-	font:500 20px \5FAE\8F6F\96C5\9ED1;
-	color:white;
+	#pageEnd a,span {
+		font: 300 13px \5B8B\4F53;
+		color:#6b6b6b;
+		line-height:5px;
+		text-decoration:none;
+		}
+	#pageEnd {
+		background-color:#fff;
+		border-bottom-right-radius:10px;
+		border-bottom-left-radius:10px;
+		height:126px;
+		background-repeat:repeat-x;
+		}
+	#pageEnd ul {
+		padding: 70px 0px 20px 0px!important;
+		}
+	#icp {
+		padding-left:185px;
+		}
+	#getEmail {
+		border-top-left-radius:10px;
+		border-top-right-radius:10px;
+		width:100%;
+		background-color:#fff;
 	}
-#pageStart ul{
-	padding:10px 0px 0px 50px;
+	/*footer sheetstyle end */
+	/*global stylesheet */
+	body {
+		background:url("http://resource.yaoranqu.com/images/back.jpg") fixed no-repeat;
+		background-position:50% 50%;
+		font-family:"Segoe UI Symbol","Segoe UI",\5FAE\8F6F\96C5\9ED1,\5E7C\5706;
+		}
+	#mainBody {
+		margin:20px auto 0px auto;
+		background-color:white;
 	}
-/*header sheetstyle end */
-/*footer sheetstyle start */
-#pageEnd{
-	text-align:center;
-	margin-bottom:10px;
+	h1 {
+		font: 400 25px \5FAE\8F6F\96C5\9ED1;
+		text-align:center;
+		padding-top:30px;
+		}
+	/* footer links start */
+	footer #link {
+		overflow:auto;
+		display:block;
+		background-color:#fff;
 	}
-#pageEnd ul li {
-	vertical-align:middle
+	footer #link h4 {
+		font:500 23px \5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',\u5E7C\u5706;
+		background-color:#f2f2f2;
+		padding-left:30px;
+		border-left:10px solid #3588b7;
+	}
+	.linkButton {
+		float:left;
+		border:0px solid black;
+		cursor:pointer;
+		display:inline-block;
+		margin-top:30px;
+		}
+	footer #linkContent {
+		float:left;
+		height:100px;
+		width:880px;
+		display:inline-block;
+		overflow:hidden;
+		}
+	footer #linkContent .linkItem{
+		float:left;
+		margin:0;
+		padding:0;
+		display:inline-block;
+		width:146px;
+		position:relative;
+		margin:auto 0.5px;
+	}
+	footer #linkContent .linkItem a{
+		color:#000;
+	}
+	footer #linkContent .linkItem ul li:first-child{
+		font:500 15px \5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',\u5E7C\u5706,sans-serif;
+		}
+	footer #linkContent .linkItem ul li:last-child{
+		font:100 13px 'Segoe UI',\9ED1\4F53,\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',sans-serif;
+		}
+	footer #linkContainer {
+		width:10000px;
+		position:relative;
+		height:100px;
+	}
+	/* define top middle bottom item */
+	footer #linkContainer .top {
+		top:0px;
+	}
+	footer #linkContainer .middle {
+		top:30%;
+	}
+	footer #linkContainer .bottom {
+		top:47%;
+	}
+	/* For Advertisement */
+	#ad {
+		width:100%;
+		background-color:#fff;
+		}
 }
-#pageEnd a,span {
-	font: 300 13px \5B8B\4F53;
-	color:#6b6b6b;
-	line-height:5px;
-	text-decoration:none;
+@media  screen  and (min-width: 1300px) {
+	#pageStart nav {
+		position:fixed;
+		left:5px;
+		top:20px;
+		height:auto;
+		background-color:#fff;
+		border:2px solid #2A5CAA;
+		border-radius:5px;
 	}
-#pageEnd {
-	background-color:#fff;
-	border-bottom-right-radius:10px;
-	border-bottom-left-radius:10px;
-	height:126px;
-	background-repeat:repeat-x;
+	#pageStart nav li  {
+		width:155px;
+		display:block;
+		padding:0;
+		text-align:center;
+		margin: 20px auto;
 	}
-#pageEnd ul {
-	padding: 70px 0px 20px 0px!important;
+	#pageStart nav ul {
+		padding:0;
 	}
-#icp {
-	padding-left:185px;
+	#pageStart nav ul li a {
+		color:#676565;
 	}
-#getEmail {
-	border-top-left-radius:10px;
-	border-top-right-radius:10px;
-	width:100%;
-	background-color:#fff;
+	#pageStart nav ul li {
+		border: 5px solid transparent;
+	}
+	#pageStart nav ul li:hover {
+		border-left:5px solid #C50D7A;
+	}
 }
-/*footer sheetstyle end */
-/*global stylesheet */
-body {
-	background:url("http://resource.yaoranqu.com/images/back.jpg") fixed no-repeat;
-	background-position:50% 50%;
-	}
-#mainBody {
-	margin:20px auto 0px auto;
-	background-color:white;
-}
-h1 {
-	font: 400 25px \5FAE\8F6F\96C5\9ED1;
-	text-align:center;
-	padding-top:30px;
-	}
-/* footer links start */
-footer #link {
-	overflow:auto;
-	display:block;
-	background-color:#fff;
-}
-footer #link h4 {
-	font:500 23px \5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',\u5E7C\u5706;
-	background-color:#f2f2f2;
-	padding-left:30px;
-	border-left:10px solid #3588b7;
-}
-.linkButton {
-	float:left;
-	border:0px solid black;
-	cursor:pointer;
-	display:inline-block;
-	margin-top:30px;
-	}
-footer #linkContent {
-	float:left;
-	height:100px;
-	width:880px;
-	display:inline-block;
-	overflow:hidden;
-	}
-footer #linkContent .linkItem{
-	float:left;
-	margin:0;
-	padding:0;
-	display:inline-block;
-	width:146px;
-	position:relative;
-	margin:auto 0.5px;
-}
-footer #linkContent .linkItem a{
-	color:#000;
-}
-footer #linkContent .linkItem ul li:first-child{
-	font:500 15px \5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',\u5E7C\u5706,sans-serif;
-	}
-footer #linkContent .linkItem ul li:last-child{
-	font:100 13px 'Segoe UI',\9ED1\4F53,\5FAE\8F6F\96C5\9ED1,'Microsoft YaHei UI',sans-serif;
-	}
-footer #linkContainer {
-	width:10000px;
-	position:relative;
-	height:100px;
-}
-/* define top middle bottom item */
-footer #linkContainer .top {
-	top:0px;
-}
-footer #linkContainer .middle {
-	top:30%;
-}
-footer #linkContainer .bottom {
-	top:47%;
-}
-/* For Advertisement */
-#ad {
-	width:100%;
-	background-color:#fff;
-	}

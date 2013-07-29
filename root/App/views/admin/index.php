@@ -108,6 +108,14 @@
 					<input type="submit" id="textSubmit" value="提交"/>
 				</form>
 			</section>
+			<section>
+				<h4>碎碎念</h4>
+				<form action="http://www.yaoranqu.com/admin/day_day_say/" method="get" accept-charset="UTF-8" id="addDayDaySay">
+					<input type="text" name="content" id="dayDaySayContent" autocomplete='off' />
+					<label for="dayDaySayContent" id='dayDaySayContentNotice'>今天你想说什么呢？</label>
+					<input type='submit' id='dayDaySaySubmit' value='OK!'/>
+				</form>
+			</section>
 		</article>
 		<article class='page' id='article' >
 			<h3>文章</h3>

@@ -15,7 +15,7 @@ class Blog extends CI_Controller {
 	public function index() {
 		//Load 3 articles.
 		$this->load->model('blog_article_model','article');
-		$data['articles'] =  $this->article->index_load();
+		$data =  $this->article->index_load();
 		// Load view.
 		$this->load->view('blog/index.php',$data);
 		/* viwe varibles map

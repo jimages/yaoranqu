@@ -1,16 +1,4 @@
-<div id="ad">
-	<!-- nuffnang -->
-	<script type="text/javascript">
-		nuffnang_bid = "1985c7a0a1706f8c96cb77229ae08117";
-		document.write( "<div id='nuffnang_lb'></div>" );
-		(function() {	
-		var nn = document.createElement('script'); nn.type = 'text/javascript';    
-		nn.src = 'http://synad2.nuffnang.com.cn/lb2.js';    
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(nn, s.nextSibling);
-		})();
-	</script>
-<!-- nuffnang-->
-</div>
+
 <footer>
 	<section id='link'>
 		<h4>朋友</h4>
@@ -73,5 +61,15 @@
 		</ul>
 	</div>
 </footer>
+<div id='ad'>
+<!-- ad javascript start -->
+	<script type="text/javascript">
+		var sogou_ad_id=245436;
+		var sogou_ad_height=60;
+		var sogou_ad_width=960;
+	</script>
+	<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+<!-- ad javascript  end -->
+</div>
 <script type="text/javascript" src="http://resource.yaoranqu.com/js/footer.js"></script>
 <script type='text/javascript' src='http://resource.yaoranqu.com/js/blog/common.js'></script>

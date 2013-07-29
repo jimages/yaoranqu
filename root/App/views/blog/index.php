@@ -18,6 +18,11 @@
 	<body>
 		<?php require('header.php'); ?>
 		<div id="mainBody">
+			<article id="dayDaySay">
+				<h3>碎碎念</h3>
+				<span><?php echo $day_day_say->create_time; ?></span>
+				<p><?php echo $day_day_say->content; ?></p>
+			</article>
 			<?php foreach ($articles as $article) { ?>
 			<article>
 				<div class="article">

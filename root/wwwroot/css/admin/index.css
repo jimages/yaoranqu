@@ -24,10 +24,13 @@
 		-moz-padding-before:0px;
 		-moz-padding-after:0px;
 		outline:invert none medium;
-		font-family:"Segoe UI Symbol","Segoe UI",\5FAE\8F6F\96C5\9ED1,\5E7C\5706;
 		padding:0px;
 		margin:0px;
 	}
+	html {
+		font-family:"Segoe UI Symbol","Segoe UI",\5FAE\8F6F\96C5\9ED1,\5E7C\5706;
+		font-size:20px;
+		}
 	body {
 		 margin:0;
 		padding:0;
@@ -271,7 +274,29 @@
 		cursor:pointer;
 		font-size:30px;
 		font-weight:500;
+		color:#fff;
 		}
+	#dayDaySayContent {
+		width:80%;
+		float:left;
+	}
+	#dayDaySayContentNotice {
+		position:absolute;
+		left:0;
+	}
+	#dayDaySaySubmit {
+		float:left;
+		width:19.75%;
+		height:42px;
+		padding:0;
+		background-color:#000;
+		border:0px solid #fff;
+		background-color:#3399cc;
+		font-size:30px;
+		font-weight:500;
+		color:#fff;
+		cursor:pointer;
+	}
 	/* index page end.article page start. */
 	#article {
 		right:100%
