@@ -10,6 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="http://resource.yaoranqu.com/css/blog_article_list.css" />
 		<link rel="stylesheet" type="text/css" href="http://resource.yaoranqu.com/css/blog_common.css" />
 		<script type="text/javascript" src="http://resource.yaoranqu.com/js/jquery-1.10.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script type="text/javascript" src="http://resource.yaoranqu.com/js/html5.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<?php require('header.php'); ?>

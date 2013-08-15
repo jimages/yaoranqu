@@ -20,17 +20,6 @@
 			$this->cache->save('index_articles',$result,10);
 		}
 		$data['articles'] = $result;
-		//get day day say
-		if (! $result = $this->cache->get('day_day_say')) {
-		$query = $this->db->query('SELECT content,DATE(create_time) AS create_time 
-									FROM prefix_day_day_say
-									ORDER BY id DESC
-									LIMIT 0,1;');
-			$result = $query->result();
-			$result = $result[0];
-			$this->cache->save('day_day_say',$result,60);
-		}
-		$data['day_day_say'] = $result;
 		return $data;
 	}
 	public function alist($page,$number) {

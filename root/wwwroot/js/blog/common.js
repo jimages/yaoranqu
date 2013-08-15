@@ -2,30 +2,25 @@
 /* Author:jimages
  * Since: July 27.2013
  */
-//function:The function is for background image.
-//chage offset of image and size.
-//width and height are size of background image. 
-function _back_image(width,height) {
-	//whether screen size wider than image size
-	if (width < innerWidth) {
-		//If screen size  is widter  than image size,image will be wider.
-		//Save proportion.
-		var proportion = innerWidth/width;
-		width = innerWidth;
-		height *= proportion;
-		//Set css.
-		$('body').css('background-size',width+'px'+' '+height+'px');
-	} 
-	//whether screen size higher than image size
-	if ( height < innerHeight) {
-		//If screen higher than image size,image will be higher.
-		var proportion = innerHeight/height;
-		height = innerHeight;
-		width *= proportion;
-		$('body').css('background-size',width+'px'+' '+height+'px');
-		//Set css
-	} 	
+/* Part:Get wether message.
+ */
+$(document).ready(weather);
+function weather() {
+	var direct = 'http://sou.qq.com/online/get_weather.php?callback=?';
+	$.getJSON(direct,_weather_succ);
 }
-//register function.
-$(window).resize(function () {_back_image(1920,1080);});
-$(window).load(function () {_back_image(1920,1080);});
+function _weather_succ (data) {
+	//Get weather message
+	var date = data.future.forecast[0].DATE;
+	var city = data.future.name;
+	var temperature = data.future.tmin_0 + '℃~' +data.future.tmax_0 + '℃';
+	var weather = data.future.wea_0;
+	//Write into html.
+	$('#pageStart #weather #report #date').html(date);
+	$('#pageStart #weather #report #city').html(city);
+	$('#pageStart #weather #report #temperature').html(temperature);
+	$('#pageStart #weather #report #weather').html(weather);
+	//Set display.
+	$('#pageStart #weather #loader').css('display','none');
+	$('#pageStart #weather #report').fadeToggle('slow');
+}

@@ -62,6 +62,20 @@
 		$sql = 'INSERT INTO prefix_day_day_say (content) VALUES (?);';
 		return $this->db->query($sql,array($content));
 	}
+	//Function: get_day_day_say.
+	//The function will load  and return day day say.
+	public function get_day_day_say() {
+		if ( FALSE ==  ($result = $this->cache->get('day_day_say'))) {
+		$query = $this->db->query('SELECT content,DATE(create_time) AS create_time 
+									FROM prefix_day_day_say
+									ORDER BY id DESC
+									LIMIT 0,1;');
+			$result = $query->result();
+			$result = $result[0];
+			$this->cache->save('day_day_say',$result,60);
+		}
+		 return $result;
+	}
 }
 //End Of File 
 //App/models/other_model.php

@@ -5,48 +5,74 @@
 @charset "UTF-8";
 /*header sheetstyle */
 @media  all {
-	#pageStart {
-		margin-top:15px;
+	#pageStart  {
+		position:relative;
 		}
 	#pageStart nav{
-		margin-top:0px;
-		height:50px;
-		background-color:#676565;
+		clear:both;
 		display:block;
-		}
-
-	#pageStart  li {
-		height:inherit;
-		width:96px;
+		text-align:center;
 		}
 	#pageStart a {
 		font:500 20px \5FAE\8F6F\96C5\9ED1;
-		color:white;
+		color:#c0c0c0;
 		}
 	#pageStart ul{
-		padding:10px 0px 0px 50px;
+		display:inline;
+		}
+	#pageStart #jimages {
+		display:inline;
+		margin:1em 1em;
+		position:absolute;
+		top:-84px;
+		border-radius:100%;
+		border:5px solid #fff;
+		box-shadow: 0px 0px 5px #888888;
+	}
+	#module {
+		overflow:auto;
+		padding:40px 0 40px 0;
+		width:100%;
+		background-color:#fff;
+		border-radius:10px;
+	}
+	section#dayDaySay,section#weather {
+		float:left;
+		display:inline-block;
+		width:50%;
+	}
+	#dayDaySay p,#weather span{
+		margin:0 20px;
+		}
+	#dayDaySay #time {
+		position: absolute;
+		top: 5px;
+		left: 127px;
+		font-size:12px;
+		color:#D9D6CF;
+	}
+	#module h3{
+		display:none;
 		}
 	/*header sheetstyle end */
 	/*footer sheetstyle start */
 	#pageEnd{
+		border-bottom-right-radius:10px;
+		border-bottom-left-radius:10px;
 		text-align:center;
 		margin-bottom:10px;
+		background-color:#fff;
+		height:126px;
+		background-repeat:repeat-x;
 		}
 	#pageEnd ul li {
 		vertical-align:middle
 	}
-	#pageEnd a,span {
+	#pageEnd a,#pageEnd  span {
 		font: 300 13px \5B8B\4F53;
 		color:#6b6b6b;
 		line-height:5px;
 		text-decoration:none;
-		}
-	#pageEnd {
-		background-color:#fff;
-		border-bottom-right-radius:10px;
-		border-bottom-left-radius:10px;
-		height:126px;
-		background-repeat:repeat-x;
 		}
 	#pageEnd ul {
 		padding: 70px 0px 20px 0px!important;
@@ -54,30 +80,29 @@
 	#icp {
 		padding-left:185px;
 		}
-	#getEmail {
-		border-top-left-radius:10px;
-		border-top-right-radius:10px;
-		width:100%;
-		background-color:#fff;
-	}
 	/*footer sheetstyle end */
 	/*global stylesheet */
 	body {
-		background:url("http://resource.yaoranqu.com/images/back.jpg") fixed no-repeat;
-		background-position:50% 50%;
-		font-family:"Segoe UI Symbol","Segoe UI",\5FAE\8F6F\96C5\9ED1,\5E7C\5706;
+		background-color:#BFB691;
+		font-family:"Segoe UI Symbol","Segoe UI",\5FAE\8F6F\96C5\9ED1,\5E7C\5706 Arial sans serif;
+		margin-top:70px;
 		}
-	#mainBody {
-		margin:20px auto 0px auto;
-		background-color:white;
-	}
 	h1 {
 		font: 400 25px \5FAE\8F6F\96C5\9ED1;
 		text-align:center;
 		padding-top:30px;
 		}
+	}
+	#mainBody {
+		margin:20px auto 0px auto;
+		background-color:white;
+	}
 	/* footer links start */
 	footer #link {
+		padding-top:20px;
+		border-top-right-radius:10px;
+		border-top-left-radius:10px;
+		margin-top:5px;
 		overflow:auto;
 		display:block;
 		background-color:#fff;
@@ -140,34 +165,4 @@
 		width:100%;
 		background-color:#fff;
 		}
-}
-@media  screen  and (min-width: 1300px) {
-	#pageStart nav {
-		position:fixed;
-		left:5px;
-		top:20px;
-		height:auto;
-		background-color:#fff;
-		border:2px solid #2A5CAA;
-		border-radius:5px;
-	}
-	#pageStart nav li  {
-		width:155px;
-		display:block;
-		padding:0;
-		text-align:center;
-		margin: 20px auto;
-	}
-	#pageStart nav ul {
-		padding:0;
-	}
-	#pageStart nav ul li a {
-		color:#676565;
-	}
-	#pageStart nav ul li {
-		border: 5px solid transparent;
-	}
-	#pageStart nav ul li:hover {
-		border-left:5px solid #C50D7A;
-	}
 }

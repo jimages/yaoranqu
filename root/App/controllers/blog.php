@@ -122,8 +122,6 @@ class Blog extends CI_Controller {
 		$data['article'] = $data['article'][0];
 		$this->load->view('blog/article',$data);
 	}
-	public function test() {
-	}
 }
 // End of file 
 // File:App/controllers/blog.php

@@ -61,15 +61,5 @@
 		</ul>
 	</div>
 </footer>
-<div id='ad'>
-<!-- ad javascript start -->
-	<script type="text/javascript">
-		var sogou_ad_id=245436;
-		var sogou_ad_height=60;
-		var sogou_ad_width=960;
-	</script>
-	<script language='JavaScript' type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
-<!-- ad javascript  end -->
-</div>
 <script type="text/javascript" src="http://resource.yaoranqu.com/js/footer.js"></script>
 <script type='text/javascript' src='http://resource.yaoranqu.com/js/blog/common.js'></script>

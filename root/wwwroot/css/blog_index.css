@@ -4,108 +4,35 @@
  */
 @charset "utf8";
 @media all {
-#getEmail {
-	padding:20px 0px;
-	width:870px;
-	margin:auto;
-	text-align:center;
-	}
-#getEmail p {
-	font: 400 18px \6977\4F53;
-	}
-#getEmail ul li{
-	vertical-align:middle;
-	}
-#getEmail span {
-	font: 400 20px \65B0\5B8B\4F53;
-	}
-#getEmail form {
-		display:inline-block;
+	#mainBody {
+		background-color:transparent!important;
 		}
-#emailInput{
-	border:2px solid #bdb8b8;
-	width:500px;
-	height:42px;
-	font:400 30px Arial; 
-	padding:0px 8px;
-	display:inline-block;
-	text-align:middle;
-	}
-#emailSubmit {
-	width:175px;
-	height:47px;
-	background-image:url(http://resource.yaoranqu.com/images/submit.png);
-	padding:6px;
-	border:0px none ;
-	font:400 21px \u65B0\5B8B\4F53;
-	}
-#emailSubmit:active,#emailSubmit-active {
-	padding:6px;
-	background-image:url(http://resource.yaoranqu.com/images/submit_down.png);
-	border:0px none ;
-	width:175px;
-	height:47px
-	}
-#mainBody {
-	background-color:transparent!important;
-	}
-#dayDaySay {
-	background-color:#fff;
-	border-radius:10px;
-	padding-bottom:2em;
-}
-#dayDaySay h3{
-	font: 400 20px "Segoe UI Symbol","Segoe UI",\5FAE\8F6F\96C5\9ED1,\5E7C\5706;
-	display:inline-block;
-	margin:1em 1.5em 0.5em 2.5em;
-	padding:0.5em;
-	background-color:#2a5caa;
-	color:#fff;
-	}
-.article {
-	border-radius:10px;
-	margin:30px 0;
-	background-color:#f8f6f6;
-	padding:30px 0 30px 0;
-	}
-.article h3{
-	padding-left:50px;
-	font:500 25px \5B8B\4F53;
-	margin-bottom:20px;
-	color:#000;
-	display:inline-block;
-	border-left:15px solid #ED9418;
-	}
-p	 {
-	line-height:180%;
-	margin:30px auto;
-	text-indent:2em;
-	width:900px;
-	}
-.article span {
-	float:right;
-	margin-right:30px;
-	font:300 15px \6977\4F53;
-	}
-#mainBody .article {
-	font:400 15px \65B0\5B8B\4F53;
-	}
-}
-@media  screen  and (min-width: 1300px) {
-	#dayDaySay {
-		position:fixed;
-		right:5px;
-		top:20px;
-		width:160px;
-	}
-	#dayDaySay h3 {
-	display:block;
-	margin:auto;
-	border-top-right-radius:10px;
-	border-top-left-radius:10px;
-	}
-	#dayDaySay p {
-		width:auto;
-		margin:0 1em;
-	}
+	.article {
+		border-radius:10px;
+		margin:30px 0;
+		background-color:#fff;
+		padding:30px 0 30px 0;
+		}
+	.article h3{
+		padding-left:50px;
+		font:500 25px \5B8B\4F53;
+		margin-bottom:20px;
+		color:#000;
+		display:inline-block;
+		border-left:15px solid #ED9418;
+		}
+	.article p {
+		line-height:180%;
+		margin:30px auto;
+		text-indent:2em;
+		width:900px;
+		}
+	.article span {
+		float:right;
+		margin-right:30px;
+		font:300 15px \6977\4F53;
+		}
+	#mainBody .article {
+		font:400 14px '微软雅黑' Microsoft YaHei '幼圆' Arial serif;
+		}
 }
